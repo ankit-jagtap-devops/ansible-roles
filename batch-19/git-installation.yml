@@ -1,0 +1,6 @@
+---
+- name: git installation
+  hosts: all
+  roles:
+    - git
+    
