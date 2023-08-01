@@ -1,12 +1,8 @@
 ---
-- name: nginx notification of handlers
-  hosts: all
-  become: true
-  handlers:
-    - name: nginx service start
-      service: 
-        name: nginx
-        state: started
-    - name: nginx-installed
-      debug:
-        msg: "nginx installed successfully"
+- name: nginx service start
+  service: 
+    name: nginx
+    state: started
+- name: nginx-installed
+  debug:
+    msg: "nginx installed successfully"

@@ -1,8 +1,4 @@
 ---
-- name: git notification of handlers
-  hosts: all
-  become: true
-  handlers:
-    - name: git-installed
-      debug:
-        msg: "Git installed successfully"
+- name: git-installed
+  debug:
+    msg: "Git installed successfully"

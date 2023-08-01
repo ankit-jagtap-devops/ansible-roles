@@ -1,11 +1,7 @@
 ---
-- name: nginx installation on nodes
-  hosts: all
-  become: true
-  tasks: 
-  - name: updating apt and installing nginx 
-    apt: 
-      name: nginx
-      state: latest
-      update_cache: yes
-    notify: nginx-installed
+- name: updating apt and installing nginx 
+  apt: 
+    name: nginx
+    state: latest
+    update_cache: yes
+  notify: nginx-installed
