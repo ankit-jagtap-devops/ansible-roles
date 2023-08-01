@@ -1,11 +1,7 @@
 ---
-- name: Git installation on nodes
-  hosts: all
-  become: true
-  tasks: 
-  - name: updating apt and installing git 
-    apt: 
-      name: git
-      state: latest
-      update_cache: yes
-    notify: git-installed
+- name: updating apt and installing git 
+  apt: 
+    name: git
+    state: latest
+    update_cache: yes
+  notify: git-installed
