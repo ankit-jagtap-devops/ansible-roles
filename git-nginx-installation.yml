@@ -1,0 +1,7 @@
+---
+- name: git and nginx installation
+  hosts: all
+  become: yes
+  roles:
+    - git
+    - nginx
