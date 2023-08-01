@@ -1,8 +1,9 @@
 ---
-- name: nginx service start
+- name: nginx-installed
   service: 
     name: nginx
     state: started
-- name: nginx-installed
+  notify: nginx-done
+- name: nginx-done
   debug:
     msg: "nginx installed successfully"
